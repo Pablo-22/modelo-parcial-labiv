@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { addDoc, collection, collectionData, CollectionReference, deleteDoc, doc, docData, DocumentData, Firestore, setDoc, updateDoc, where, query, getDocs } from '@angular/fire/firestore';
+import { addDoc, collection, collectionData, CollectionReference, deleteDoc, doc, docData, DocumentData, Firestore, setDoc, updateDoc, where, query, getDocs, Timestamp } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Pelicula } from '../Entidades/pelicula';
 
@@ -14,7 +14,6 @@ export class PeliculasService {
 		this.peliculasCollection = collection(this._firestore, 'peliculas');
 
 	}
-
 
 	
 	getAll() {

@@ -1,1 +1,33 @@
-<p>tabla-pelicula works!</p>
+<div class="card shadow-2-strong"> 
+
+	<div class="card-body p-0"> 
+
+		<div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" 
+			style="position: relative; max-height: 500px">
+			
+			<table class="table table-striped">
+				<thead>
+					<tr>
+					<th scope="col">#</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Tipo</th>
+					<th scope="col">Fecha de estreno</th>
+					<th scope="col">Público</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr *ngFor="let pelicula of peliculas; index as i" (click)="onMovieSelected(pelicula)">
+						<td scope="row">{{ i + 1 }}</td>
+						<td> {{ pelicula.nombre }} </td>
+						<td> {{ pelicula.tipo }} </td>
+						<td> {{ pelicula.fechaEstreno.toDate() | date: 'yyyy-MM-dd' }} </td>
+						<td> {{ pelicula.cantidadPublico }} </td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+
+</div>

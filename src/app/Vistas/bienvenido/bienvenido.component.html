@@ -1,7 +1,7 @@
-<div class="bg-dark text-secondary px-4 py-5 text-center" style="min-height: 60vh">
-    <div class="py-5">
-      <h1 class="display-5 fw-bold text-white">Menú</h1>
-      <div class="col-lg-6 mx-auto">
+<div class="bg-dark text-secondary px-4 py-5 bg-img " style="min-height: 80vh">
+    <div class="py-5 ms-5">
+      <h1 class="display-5 fw-bold text-white mb-5">Menú</h1>
+      <div class="col-lg-6">
 
 		<!-- 
 			<p class="fs-5 mb-4">
@@ -11,15 +11,36 @@
 
 		<div class="container">
 			<div class="row"> 
-				<button [routerLink]="'/peliculas/listado-pelicula'" class="col btn btn-close-white fw-bold fs-5">
-					Listado películas 
-				</button>  
+				<div class="container">
+					<div class="row fw-bold fs-5">
+						Películas 
+					</div>  
+
+					<button [routerLink]="'/peliculas/listado-pelicula'" class="row btn btn-close-white fw-bold fs-5 d-block">
+						Listado de películas 
+					</button> 
+
+					<button [routerLink]="'/busqueda'" class="row btn btn-close-white fw-bold fs-5 d-block">
+						Búsqueda de películas 
+					</button> 
+				</div>
+				 
 			</div>
 
-			<div class="row"> 
-				<button class="col btn btn-close-white fw-bold fs-5">
-					Listado actores 
-				</button> 
+			<div class="row pt-3"> 
+				<div class="container">
+					<div class="row fw-bold fs-5">
+						Actores 
+					</div>  
+					
+					<button [routerLink]="''" class="col btn btn-close-white fw-bold fs-5 d-block">
+						Listado de actores
+					</button> 
+
+					<button [routerLink]="''" class="col btn btn-close-white fw-bold fs-5 d-block">
+						Búsqueda de películas 
+					</button> 
+				</div>
 			</div>
 		</div>
 

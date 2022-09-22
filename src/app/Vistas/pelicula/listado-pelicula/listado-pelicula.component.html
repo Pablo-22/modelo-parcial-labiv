@@ -1,18 +1,9 @@
-<table class="table table-striped">
-	<thead>
-		<tr>
-		<th scope="col">#</th>
-		<th scope="col">Nombre</th>
-		<th scope="col">Tipo</th>
-		</tr>
-	</thead>
 
-	<tbody>
-		<tr *ngFor="let pelicula of peliculas; index as i">
-			<td scope="row">{{ i + 1 }}</td>
-			<td> {{ pelicula.nombre }} </td>
-			<td> {{ pelicula.tipo }} </td>
-		</tr>
-	</tbody>
+<div class="d-flex justify-content-center pt-3">
+	<div style="width:80vw">
+		
+		<h1 class="py-4"> Películas </h1>
 
-  </table>
+		<app-tabla-pelicula></app-tabla-pelicula>
+	</div>
+</div>

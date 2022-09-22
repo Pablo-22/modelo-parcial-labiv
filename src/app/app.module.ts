@@ -13,6 +13,7 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
 import { ListadoPeliculaComponent } from './Vistas/pelicula/listado-pelicula/listado-pelicula.component';
+import { DetallePeliculaComponent } from './Componentes/detalle-pelicula/detalle-pelicula.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ListadoPeliculaComponent } from './Vistas/pelicula/listado-pelicula/lis
     TablaPeliculaComponent,
     TablaActorComponent,
 	ListadoPeliculaComponent,
+ DetallePeliculaComponent,
 
   ],
   imports: [

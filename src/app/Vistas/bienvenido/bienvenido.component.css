@@ -1,0 +1,7 @@
+.bg-img{
+	background-image:
+		linear-gradient(to right, rgba(0, 0, 0, 0.719), rgba(60, 38, 138, 0.486))
+		, url('../../../assets/pexels-cottonbro-8263322.jpg');
+		
+	background-position: left;
+}
