@@ -16,17 +16,24 @@ export class TablaPeliculaComponent implements OnInit {
 	movieSelected = new EventEmitter<Pelicula>();
 
 	constructor(private _peliculas:PeliculasService) { 
-	  this._peliculas.getAll().subscribe(result => {
-		  this.peliculas = result;
+		this._peliculas.getAll().subscribe(result => {
+			this.peliculas = result;
 	})
   }
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	}
 
-  onMovieSelected(pelicula:Pelicula) {
-	this.movieSelected.emit(pelicula);
-  }
+	onMovieSelected(pelicula:Pelicula) {
+		this.movieSelected.emit(pelicula);
+	}
+
+	movieDate(fechaEstreno:any){
+		if (fechaEstreno) {
+			return fechaEstreno.toDate();
+		}
+		return '';
+	}
 
 }
 

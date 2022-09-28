@@ -70,7 +70,7 @@ export class PeliculasService {
 
 
 	delete(id: string) {
-		const peliculaDocumentReference = doc(this._firestore, `pelicula/${id}`);
+		const peliculaDocumentReference = doc(this._firestore, `peliculas/${id}`);
 		return deleteDoc(peliculaDocumentReference);
 	}
 }

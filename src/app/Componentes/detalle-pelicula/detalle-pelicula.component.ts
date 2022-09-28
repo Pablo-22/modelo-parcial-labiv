@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Pelicula } from 'src/app/Entidades/pelicula';
 
 @Component({
   selector: 'app-detalle-pelicula',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetallePeliculaComponent implements OnInit {
 
-  constructor() { }
+	@Input()
+	pelicula:Pelicula = new Pelicula();
 
-  ngOnInit(): void {
-  }
+	constructor() { }
+
+	ngOnInit(): void {
+	}
+
+	movieDate(fechaEstreno:any){
+		if (fechaEstreno) {
+			return fechaEstreno.toDate();
+		}
+		return '';
+	}
 
 }

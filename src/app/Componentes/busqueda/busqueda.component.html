@@ -4,23 +4,23 @@
 		
 		<h1 class="py-4"> Búsqueda </h1>
 
-		<app-tabla-pelicula></app-tabla-pelicula>
+		<app-tabla-pelicula (movieSelected)="this.onMovieSelected($event)" > </app-tabla-pelicula>
+
+
 
 		<div class="container">
-			<div class="row">
+			<div class="row actions-section">
 
-				<div class="col-8 mt-3">
-					<app-detalle-pelicula>
-						
-					</app-detalle-pelicula>
+				<div class="col mt-3">
+					<app-detalle-pelicula [pelicula]="this.pelicula"> </app-detalle-pelicula>
 				</div>
 
 				<div class="col  d-flex align-items-stretch mt-3">
 					<div class="card">
 						<div class="card-body d-flex flex-column">
 							<h5 class="card-title">Modificar</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At possimus ullam eius quas adipisci voluptatem repudiandae molestiae, esse voluptatum qui quasi.</p>
-							<a href="#" class="btn btn-outline-primary mt-auto">Modificar</a>
+							<p class="card-text">Realice las modificaciones que desee. Al finalizar, podrá guardar los cambios realizados</p>
+							<button class="btn btn-outline-primary mt-auto" (click)="this.onModify()">Modificar</button>
 						</div>
 					</div>
 				</div>
@@ -30,10 +30,10 @@
 						<div class="card-body d-flex flex-column">
 							<h5 class="card-title">Eliminar</h5>
 							<p class="card-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. At possimus ullam eius quas adipisci voluptatem repudiandae molestiae, esse voluptatum qui quasi.
+								Se eliminará la película seleccionada
 							</p>
 
-							<a href="#" class="btn btn-outline-primary mt-auto">Eliminar</a>
+							<button  class="btn btn-outline-primary mt-auto" (click)="this.onDelete()">Eliminar</button>
 						</div>
 					</div>
 				</div>

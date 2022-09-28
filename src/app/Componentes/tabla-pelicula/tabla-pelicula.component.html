@@ -21,7 +21,7 @@
 						<td scope="row">{{ i + 1 }}</td>
 						<td> {{ pelicula.nombre }} </td>
 						<td> {{ pelicula.tipo }} </td>
-						<td> {{ pelicula.fechaEstreno.toDate() | date: 'yyyy-MM-dd' }} </td>
+						<td> {{ this.movieDate(pelicula.fechaEstreno) | date: 'yyyy-MM-dd' }} </td>
 						<td> {{ pelicula.cantidadPublico }} </td>
 					</tr>
 				</tbody>

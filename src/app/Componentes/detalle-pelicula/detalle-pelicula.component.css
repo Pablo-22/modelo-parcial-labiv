@@ -1,0 +1,14 @@
+.details-container{
+	height: 100%;
+	position: static;
+}
+
+.movie-img{
+	height: 100%;
+	object-fit: fill;
+	border-radius: 10px;
+}	
+
+[contenteditable] {
+	outline: 0px solid transparent;
+}

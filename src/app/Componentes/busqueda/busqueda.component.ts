@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Pelicula } from 'src/app/Entidades/pelicula';
+import { PeliculasService } from 'src/app/Servicios/peliculas.service';
 
 @Component({
   selector: 'app-busqueda',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusquedaComponent implements OnInit {
 
-  constructor() { }
+	pelicula:Pelicula = new Pelicula();
 
-  ngOnInit(): void {
-  }
+	constructor(private _peliculasService:PeliculasService) { }
+
+	ngOnInit(): void {
+	}
+
+	onMovieSelected($event:any){
+		this.pelicula = $event;
+	}
+
+	onDelete(){
+		console.log(this.pelicula);
+		this._peliculasService.delete(this.pelicula.id);
+		this.pelicula = new Pelicula();
+	}
+
+	onModify(){
+		this._peliculasService.update(this.pelicula);
+	}
 
 }
