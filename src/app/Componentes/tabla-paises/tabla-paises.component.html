@@ -1,0 +1,11 @@
+<div class="d-flex flex-column gap-2 scrollable">
+	<button *ngFor="let pais of paises" class="btn d-flex flex-row justify-content-center list-item" style="width: 300px;">
+		<div class="d-flex flex-column justify-content-center flex-grow-1" style="text-align: left;">
+			<span class="fw-bold"> {{ pais.name }} </span>
+			<span class="text-muted"> {{ pais.capital }} </span>
+		</div>
+		<div>
+			<img src="https://cdn-icons-png.flaticon.com/512/940/940207.png" width="50" >
+		</div>
+	</button>
+</div>

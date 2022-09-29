@@ -14,6 +14,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
 import { ListadoPeliculaComponent } from './Vistas/pelicula/listado-pelicula/listado-pelicula.component';
 import { DetallePeliculaComponent } from './Componentes/detalle-pelicula/detalle-pelicula.component';
+import { TablaPaisesComponent } from './Componentes/tabla-paises/tabla-paises.component';
+import { AltaActorComponent } from './Vistas/actor/alta-actor/alta-actor.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { DetallePeliculaComponent } from './Componentes/detalle-pelicula/detalle
     TablaPeliculaComponent,
     TablaActorComponent,
 	ListadoPeliculaComponent,
- DetallePeliculaComponent,
+	DetallePeliculaComponent,
+	TablaPaisesComponent,
+	AltaActorComponent,
 
   ],
   imports: [
@@ -33,7 +38,7 @@ import { DetallePeliculaComponent } from './Componentes/detalle-pelicula/detalle
     NgbModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
-
+	HttpClientModule 
 
   ],
   providers: [],
